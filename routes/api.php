@@ -6,9 +6,10 @@
 
     $router = new Router;
 
-    // $router->get('/', [new BaseController, 'index']);
+    $router->get('/', [new BaseController, 'index']);
     $router->get('/show-user', [new UserController, 'show']);
     $router->post('/user', [new UserController, 'create']);
+    $router->post('/user/{id}', [new UserController, 'single']);
 
     $router->addNotFoundHandler([new BaseController, 'error']);
     $router->run();

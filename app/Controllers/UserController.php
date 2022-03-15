@@ -5,7 +5,6 @@
     {
         public function index() 
         {
-            //
             $this->view('welcome');
         }
 
@@ -18,6 +17,11 @@
         public function show() 
         {
             $this->view('homepage');
+        }
+
+        public function single($id) 
+        {
+            echo $id;
         }
 
     }
